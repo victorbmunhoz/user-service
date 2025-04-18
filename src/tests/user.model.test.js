@@ -11,6 +11,8 @@ jest.mock('mongoose', () => {
       return function(data) {
         return {
           ...data,
+          createdAt: data.createdAt || new Date(),
+          updatedAt: data.updatedAt || new Date(),
           save: jest.fn().mockResolvedValue(data)
         };
       };
