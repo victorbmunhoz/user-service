@@ -1,0 +1,23 @@
+# Dependências
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Ambiente
+.env
+.env.test
+
+# Logs
+logs
+*.log
+
+# Diretório de produção
+/dist
+
+# Diretório de cobertura de testes
+/coverage
+
+# Arquivos temporários
+.DS_Store
+Thumbs.db 
