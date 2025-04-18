@@ -32,7 +32,7 @@ app.get('/health', (req, res) => {
 });
 
 // Middleware de tratamento de erro global
-app.use((err, req, res, next) => {
+app.use((err, req, res, _next) => {
   logger.error(`Erro global: ${err.stack}`);
   res.status(500).json({
     message: 'Ocorreu um erro interno no servidor',

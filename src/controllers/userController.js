@@ -5,7 +5,7 @@ const logger = require('../config/logger');
 exports.getAllUsers = async (req, res) => {
   try {
     const users = await User.find();
-    logger.info(`Listagem de todos os usuários realizada com sucesso`);
+    logger.info('Listagem de todos os usuários realizada com sucesso');
     res.status(200).json(users);
   } catch (error) {
     logger.error(`Erro ao listar usuários: ${error.message}`);
@@ -112,7 +112,7 @@ exports.deleteUser = async (req, res) => {
 exports.getAllTeachers = async (req, res) => {
   try {
     const teachers = await User.find({ role: 'teacher' });
-    logger.info(`Listagem de professores realizada com sucesso`);
+    logger.info('Listagem de professores realizada com sucesso');
     res.status(200).json(teachers);
   } catch (error) {
     logger.error(`Erro ao listar professores: ${error.message}`);
@@ -124,7 +124,7 @@ exports.getAllTeachers = async (req, res) => {
 exports.getAllStudents = async (req, res) => {
   try {
     const students = await User.find({ role: 'student' });
-    logger.info(`Listagem de alunos realizada com sucesso`);
+    logger.info('Listagem de alunos realizada com sucesso');
     res.status(200).json(students);
   } catch (error) {
     logger.error(`Erro ao listar alunos: ${error.message}`);
